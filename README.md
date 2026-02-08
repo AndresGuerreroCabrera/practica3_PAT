@@ -10,7 +10,7 @@ Comandos usados: git init, git add ., git commit -m "Initial Commit"
 
 1. **Inicializar el repositorio:** `git init`
 2. **Añadir archivos:** `git add .`
-3. **Primer commit:** `git commit -m "Initial commit"`
+3. **Primer commit:** `git commit -m "Primer commit"`
 
 ## Spring Boot y Spring Initializr
 Para el esqueleto del proyecto, se utilizó Spring Initializer
