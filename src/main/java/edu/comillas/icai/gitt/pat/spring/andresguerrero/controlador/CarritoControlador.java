@@ -35,15 +35,22 @@ public class CarritoControlador {
         return carrito;
     }
 
-    @PostMapping("/api/carrito/{idCarrito")
-    @ResponseStatus(HttpStatus.CREATED)
-    public Carrito getCarrito(@RequestBody int idCarrito) {
+    @GetMapping("/api/carrito/{idCarrito}")
+    //@ResponseStatus(HttpStatus.CREATED)
+    public Carrito getCarrito(@PathVariable int idCarrito) {
         return carritos.get(idCarrito);
     }
-    @DeleteMapping("/api/carrito/{idCarrito")
+
+    @DeleteMapping("/api/carrito/{idCarrito}")
     @ResponseStatus(HttpStatus.CREATED)
-    public Carrito borrarCarrito(@RequestBody int idCarrito) {
+    public Carrito borrarCarrito(@PathVariable int idCarrito) {
         return carritos.remove(idCarrito);
+    }
+
+    @PutMapping("/api/carrito/{idCarrito}")
+    public Carrito modificaCarrito(@PathVariable int idCarrito, @RequestBody Carrito carrito){
+        carritos.put(idCarrito, carrito);
+        return carrito;
     }
 
     /*@PostMapping("/api/contadores")
